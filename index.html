@@ -6,12 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML5 Boilerplate</title>
     <style>
+        :root{
+            --bg: #f2f2f2;
+            --card: #fff;
+            --accent: #222;
+            --muted: #666;
+        }
 
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:var(--bg);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:var(--accent);
+            padding:20px;
+        }
+
+        .card{
+            width:360px;
+            max-width:100%;
+            background:var(--card);
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.12);
+            padding:22px;
+            display:flex;
+            gap:16px;
+            align-items:center;
+        }
+
+        .logo{
+            width:88px;
+            height:88px;
+            object-fit:contain;
+            flex:0 0 88px;
+        }
+
+        .info h1{
+            margin:0;
+            font-size:18px;
+            font-weight:600;
+        }
+
+        .subtitle{
+            margin:6px 0;
+            color:var(--muted);
+            font-size:13px;
+        }
+
+        hr{
+            border:0;
+            border-top:1px dashed rgba(0,0,0,0.08);
+            margin:8px 0;
+        }
+
+        .info p{
+            margin:6px 0;
+            font-size:14px;
+        }
+
+        a{color:inherit;text-decoration:none}
+        a:hover{text-decoration:underline}
     </style>
 </head>
 
 <body>
-<h1>HTML5 Boilerplate</h1>
+<div class="card">
+    <img src="house.png" alt="Логотип" class="logo" />
+    <div class="info">
+        <h1>Olga Pokrovskaya</h1>
+        <p class="subtitle">Villas · Appartements — Le service de conciergerie</p>
+        <hr />
+        <p>📞 <a href="tel:+33642482288">+33 642 48 22 88</a></p>
+        <p>📞 <a href="tel:+79859888866">+7 985 988 88 66</a></p>
+        <p>✉️ <a href="mailto:olga@gmail.com">olga@gmail.com</a></p>
+        <p>📍 06000 Nice, 6 rue Rivoli</p>
+    </div>
+</div>
 <script>
 
 </script>
