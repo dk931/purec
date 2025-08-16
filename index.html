@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML5 Boilerplate</title>
+    <title>Business Card</title>
     <style>
         :root{
             --bg: #f2f2f2;
@@ -26,16 +26,49 @@
             padding:20px;
         }
 
-        .card{
-            width:360px;
-            max-width:100%;
-            background:var(--card);
-            border-radius:12px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.12);
-            padding:22px;
-            display:flex;
-            gap:16px;
-            align-items:center;
+        .card-container {
+            width: 360px;
+            max-width: 100%;
+            height: 200px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+        }
+
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: var(--card);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            padding: 22px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: #222;
+            color: deeppink;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
         }
 
         .logo{
@@ -70,25 +103,49 @@
 
         a{color:inherit;text-decoration:none}
         a:hover{text-decoration:underline}
+
+        .back-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .back-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .back-text {
+            font-size: 13px;
+            color: #ccc;
+        }
     </style>
 </head>
 
 <body>
-<div class="card">
-    <img src="house.png" alt="Логотип" class="logo" />
-    <div class="info">
-        <h1>Olga Pokrovskaya</h1>
-        <p class="subtitle">Villas · Appartements — Le service de conciergerie</p>
-        <hr />
-        <p>📞 <a href="tel:+33642482288">+33 642 48 22 88</a></p>
-        <p>📞 <a href="tel:+79859888866">+7 985 988 88 66</a></p>
-        <p>✉️ <a href="mailto:olga@gmail.com">olga@gmail.com</a></p>
-        <p>📍 06000 Nice, 6 rue Rivoli</p>
+<div class="card-container">
+    <div class="card">
+        <div class="card-front">
+            <img src="https://via.placeholder.com/88" alt="Логотип" class="logo" />
+            <div class="info">
+                <h1>VIZIT PUREC</h1>
+                <p class="subtitle">Villas · Appartements — Le service de conciergerie</p>
+                <hr />
+                <p>📞 <a href="tel:+99999999999">+9 999 99 99 99</a></p>
+                <p>📞 <a href="tel:+99999999999">+9 999 999 99 99</a></p>
+                <p>✉️ <a href="purес@mail.com">purес@mail.com</a></p>
+                <p>📍 06000 Nice, 6 rue Rivoli</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <img src="https://via.placeholder.com/60" alt="Логотип" class="back-logo" />
+            <div class="back-title">Conciergerie Premium</div>
+            <div class="back-text">Service exclusif à Nice</div>
+            <div class="back-text">Depuis 2015</div>
+            <div class="back-text">www.conciergerie-nice.com</div>
+        </div>
     </div>
 </div>
-<script>
-
-</script>
 </body>
 
 </html>
