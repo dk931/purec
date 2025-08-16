@@ -7,9 +7,9 @@
     <title>Business Card</title>
     <style>
         :root{
-            --bg: #f2f2f2;
-            --card: #fff;
-            --accent: #222;
+            --bg: linear-gradient(135deg, #83E4FF 0%, #ffffff 50%, #A4FF83 100%);
+            --card: #ffffff;
+            --accent: #111;
             --muted: #666;
         }
 
@@ -25,6 +25,22 @@
             color:var(--accent);
             padding:20px;
         }
+
+        body::before {
+            content: "ОГУРЕЧНЫЙ МАГНАТ";
+            position: fixed;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 10vw;
+            font-weight: 900;
+            color: rgba(0,0,0,0.05);
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+
+
 
         .card-container {
             width: 360px;
@@ -72,8 +88,8 @@
         }
 
         .logo{
-            width:88px;
-            height:88px;
+            width:100px;
+            height:100px;
             object-fit:contain;
             flex:0 0 88px;
         }
@@ -132,7 +148,7 @@
                 <hr />
                 <p>📞 <a href="tel:+99999999999">+9 999 99 99 99</a></p>
                 <p>📞 <a href="tel:+99999999999">+9 999 999 99 99</a></p>
-                <p>✉️ <a href="purес@mail.com">purес@mail.com</a></p>
+                <p>✉️ <a href="purec@mail.com">purес@mail.com</a></p>
                 <p>📍 что-то около Твери</p>
             </div>
         </div>
