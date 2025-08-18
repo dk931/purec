@@ -59,7 +59,7 @@
             cursor: pointer;
         }
 
-        .card-container:hover .card {
+        .card-container .card:focus {
             transform: rotateY(180deg);
         }
 
@@ -139,7 +139,7 @@
 
 <body>
 <div class="card-container">
-    <div class="card">
+    <button class="card">
         <div class="card-front">
             <img src="images/hhh.jpg" alt="Логотип VIZIT" class="logo" />
             <div class="info">
@@ -157,7 +157,7 @@
             <div class="back-text">Подготовка ОГЭ, МЦКО</div>
             <div class="back-text">Язык Python</div>
         </div>
-    </div>
+    </button>
 </div>
 </body>
 
