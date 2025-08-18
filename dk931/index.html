@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Business Card</title>
+    <script>
+        const email = "danya.kurov.02@mail.ru";
+    </script>
     <style>
         :root{
             --bg: linear-gradient(135deg, #83E4FF 0%, #ffffff 50%, #A4FF83 100%);
@@ -147,7 +150,12 @@
                 <p class="subtitle"></p>
                 <hr />
                 <p>📞 <a href="tel:+79969225172">+7 996 922 51 72</a></p>
-                <p>✉️ <a href="mailto:danya.kurov.02@mail.com">danya.kurov.02@mail.com</a></p>
+                <p>✉️ <a id="email" href="#"></a></p>
+                <script>
+                    const emailAnchor = document.querySelector("#email");
+                    emailAnchor.href = "mailto:" + email;
+                    emailAnchor.innerText = email;
+                </script>
                 <p>📍 Тверь</p>
             </div>
         </div>
