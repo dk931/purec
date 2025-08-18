@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business Card</title>
+    <style>
+        :root{
+            --bg: linear-gradient(135deg, #83E4FF 0%, #ffffff 50%, #A4FF83 100%);
+            --card: #ffffff;
+            --accent: #111;
+            --muted: #666;
+        }
+
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:var(--bg);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:var(--accent);
+            padding:20px;
+        }
+
+        body::before {
+            content: "ОГУРЕЧНЫЙ МАГНАТ";
+            position: fixed;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 10vw;
+            font-weight: 900;
+            color: rgba(0,0,0,0.05);
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+
+
+
+        .card-container {
+            width: 360px;
+            max-width: 100%;
+            height: 200px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+        }
+
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: var(--card);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            padding: 22px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: #222;
+            color: deeppink;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .logo{
+            width:100px;
+            height:100px;
+            object-fit:contain;
+            flex:0 0 88px;
+        }
+        .info h1{
+            margin:0;
+            font-size:18px;
+            font-weight:600;
+        }
+
+        .subtitle{
+            margin:6px 0;
+            color:var(--muted);
+            font-size:13px;
+        }
+
+        hr{
+            border:0;
+            border-top:1px dashed rgba(0,0,0,0.08);
+            margin:8px 0;
+        }
+
+        .info p{
+            margin:6px 0;
+            font-size:14px;
+        }
+
+        a{color:inherit;text-decoration:none}
+        a:hover{text-decoration:underline}
+
+        .back-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .back-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .back-text {
+            font-size: 13px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+<div class="card-container">
+    <div class="card">
+        <div class="card-front">
+            <img src="images/logo.png" alt="Логотип VIZIT PUREC" class="logo" />
+            <div class="info">
+                <h1>VIZIT PUREC</h1>
+                <p class="subtitle">"ООО" огуречная ферма</p>
+                <hr />
+                <p>📞 <a href="tel:+99999999999">+9 999 99 99 99</a></p>
+                <p>📞 <a href="tel:+99999999999">+9 999 999 99 99</a></p>
+                <p>✉️ <a href="purec@mail.com">purес@mail.com</a></p>
+                <p>📍 что-то около Твери</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <img src="images/gg.png" alt="Логотип" class="back-logo" />
+            <div class="back-title">Премиальный огурец</div>
+            <div class="back-text">Хруст Гарантировн</div>
+            <div class="back-text">Выпуск 2025</div>
+            <div class="back-text">"ООО" огуречная ферма</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

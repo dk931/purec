@@ -1,6 +1,10 @@
 *
+
 !.gitignore
+!/*/
+!/*/images
+!/*/index.html
 !/readme.md
-!/index.html
 !/todo.txt
-!/images/
+
+/.idea/
