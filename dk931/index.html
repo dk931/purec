@@ -7,6 +7,8 @@
     <title>Business Card</title>
     <script>
         const email = "danya.kurov.02@mail.ru";
+        const telegram = "https://t.me/daniil_kurov";
+        const phone = "+79969225172";
     </script>
     <style>
         :root{
@@ -167,12 +169,16 @@
                 <h1>Подготовка к экзаменам</h1>
                 <p class="subtitle"></p>
                 <hr />
-                <p>📞 <a href="tel:+79969225172">+7 996 922 51 72</a></p>
+                <p>📞 <a id="telegram" href="https://t.me/daniil_kurov" target="_blank">+7 996 922 51 72</a></p>
                 <p>✉️ <a id="email" href="#"></a></p>
                 <script>
                     const emailAnchor = document.querySelector("#email");
                     emailAnchor.href = "mailto:" + email;
                     emailAnchor.innerText = email;
+
+                    const telegramAnchor = document.querySelector("#telegram");
+                    telegramAnchor.href = telegram;
+                    telegramAnchor.innerText = phone;
                 </script>
                 <p>📍 Тверь</p>
             </div>
